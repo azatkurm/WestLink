@@ -132,4 +132,114 @@ template {
 }
 
 
-/* navbar */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+* { box-sizing: border-box; }
+html,body { margin: 0; padding: 0; font-family: 'DM Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #0b1220; }
+
+/* Header */
+.header {
+  padding: 24px 0;
+  background: #ffffff;
+}
+
+
+.header__container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.header__logo img {
+  display: block;
+
+  width: auto;
+}
+
+
+.header__nav {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 32px; 
+}
+
+.header__list {
+  display: flex;
+  gap: 40px; 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+
+.header__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(11,18,32,0.85);
+  transition: color .15s ease, transform .12s ease;
+  padding: 6px 0;
+}
+
+.header__link:hover,
+.header__link:focus {
+  color: #0b1220;
+  transform: translateY(-1px);
+}
+
+
+.header__btn {
+  justify-self: end;
+  background: #8b2b20; 
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 18px 24px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(139,43,32,0.12);
+  border: none;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+
+.header__btn:hover,
+.header__btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(139,43,32,0.14);
+  opacity: 0.98;
+}
+
+
+.header__nav > .header__btn {
+  margin-left: 24px;
+}
+
+
+@media (max-width: 880px) {
+  .header__list { display: none; }
+  .header__container { grid-template-columns: auto 1fr auto; }
+  .header__nav { justify-self: center; }
+}
+
+
+@media (max-width: 480px) {
+  .header__btn { padding: 10px 14px; font-size: 13px; border-radius: 8px; }
+  .header__logo img { height: 30px; }
+}
