@@ -348,13 +348,13 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   margin: 0 auto 40px;
   max-width: 900px;
   color: #606266;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
 
 .problem__grid {
-  margin-top: 180px;
+  margin-top: 220px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
@@ -394,11 +394,11 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   background: #fff;
   border-radius: 18px;
   border: none;
-  min-height: 350px;         
-  padding-top: 180px;
+  min-height: 330px;         
+  padding-top: 200px;
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 10px;
   text-align: center;
   box-shadow: 0 2px 14px rgba(151, 156, 118, 0.274);
 }
@@ -429,7 +429,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 /* ===== Direct Route ===== */
 .direct-route {
-  
+  margin-top: 80px;
   background: #ffffff;
   text-align: center;
 }
