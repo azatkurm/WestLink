@@ -145,17 +145,32 @@ body {
 * { box-sizing: border-box; }
 html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #0b1220; }
 
+/* Container */
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
 /* Header */
 .header {
-  padding: 24px 24px;
+  padding: 24px 0;
   background: #ffffff;
 }
 
-
 .header__container {
-  
-  margin: 0 auto;
-  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -247,12 +262,10 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 /* hero */
 .hero {
-    padding-left: 60px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
 }
 
-.container.hero__container {
+.hero__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -260,7 +273,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .hero__content {
     flex: 1;
-    max-width: 700px;
+    max-width: 1000px;
 }
 
 .hero_btn {
@@ -303,7 +316,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
     line-height: 32px;
 }
 @media (max-width: 768px) {
-    .container.hero__container {
+    .hero__container {
         flex-direction: column;
         text-align: center;
     }
@@ -317,13 +330,11 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 /* ===== Problem ===== */
 .problem {
-  padding: 72px 24px;
+  padding: 72px 0;
   background: #ffffff;
 }
 
-.container.problem__container {
-  max-width: 1200px;
-  margin: 0 auto;
+.problem__container {
   text-align: center;
 }
 
@@ -335,7 +346,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .problem__subtitle {
   margin: 0 auto 40px;
-  max-width: 760px;
+  max-width: 900px;
   color: #606266;
   font-size: 15px;
   line-height: 1.6;
@@ -356,7 +367,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .problem-item {
   position: relative;
-  width: min(790px, 100%); 
+  width: min(1100px, 100%); 
   filter: drop-shadow(0 20px 40px rgba(17,24,39,.12));
 }
 
@@ -418,7 +429,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 /* ===== Direct Route ===== */
 .direct-route {
-  padding: 72px 24px;
+  
   background: #ffffff;
   text-align: center;
 }
@@ -430,7 +441,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 }
 .direct-route-subtitle {
   margin: 0 auto;
-  max-width: 760px;
+  max-width: 900px;
   color: #606266;
   font-size: 15px;
   line-height: 1.6;
@@ -438,8 +449,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 }
 
 .direct-route-item-1-img{
-  max-width: 835px;
-  max-height: 730px;
+  max-width: 875px;
   width: 100%;
   height: auto;
   margin-top: 40px;
@@ -457,6 +467,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 160px;
 }
 
 .direct-route-card {
@@ -465,12 +476,12 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   border-radius: 18px;
   box-shadow: 0 6px 28px rgba(17, 24, 39, 0.12);
   padding: 24px 28px;
-  max-width: 680px;
+  max-width: 685px;
   text-align: left;
 }
 
 .direct-route-card h4 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   margin: 0 0 8px;
   color: #1d1f24;
@@ -478,7 +489,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .direct-route-card p {
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.6;
   color: #4b4f57;
 }
