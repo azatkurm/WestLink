@@ -493,3 +493,59 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   line-height: 1.6;
   color: #4b4f57;
 }
+
+
+
+/* ===== Direct Route 2 ===== */
+.direct-route-2 {
+  
+  background: #ffffff;
+  text-align: center;
+}
+
+
+.direct-route-item-2-img{
+  
+  width: 100%;
+  height: auto;
+
+}
+
+.direct-route-cards-2 {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  justify-items: center; 
+}
+
+.direct-route-item-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+}
+
+.direct-route-card-2 {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 28px rgba(17, 24, 39, 0.12);
+  padding: 24px 28px;
+  max-width: 685px;
+  text-align: left;
+}
+
+.direct-route-card h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #1d1f24;
+}
+
+.direct-route-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b4f57;
+}
