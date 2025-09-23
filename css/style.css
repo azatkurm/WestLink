@@ -414,3 +414,71 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   .problem-item__img { transform: translate(-50%, -40%); }
   .problem-card { padding: 130px 20px 36px; }
 }
+
+
+/* ===== Direct Route ===== */
+.direct-route {
+  padding: 72px 24px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.direct-route-title {
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.direct-route-subtitle {
+  margin: 0 auto;
+  max-width: 760px;
+  color: #606266;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+.direct-route-item-1-img{
+  max-width: 835px;
+  max-height: 730px;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+.direct-route-cards {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  justify-items: center; 
+}
+
+.direct-route-item-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.direct-route-card {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 28px rgba(17, 24, 39, 0.12);
+  padding: 24px 28px;
+  max-width: 680px;
+  text-align: left;
+}
+
+.direct-route-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #1d1f24;
+}
+
+.direct-route-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b4f57;
+}
