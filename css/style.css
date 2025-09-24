@@ -69,6 +69,7 @@ button,select {
 }
 button,[type="button"],[type="reset"],[type="submit"] {
   -webkit-appearance: button;
+  appearance: button;
 }
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -109,6 +110,7 @@ textarea {
 }
 [type="search"] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   outline-offset: -2px;
 }
 [type="search"]::-webkit-search-decoration {
@@ -144,6 +146,93 @@ body {
 
 * { box-sizing: border-box; }
 html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #0b1220; }
+
+/* ===== Анимации ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Классы для анимаций */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Скрытие элементов до анимации */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Container */
 .container {
@@ -294,6 +383,14 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   border: none;
   font-weight: 500;
   color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.shipper:hover {
+  background-color: #7a1e12;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(146, 36, 21, 0.3);
 }
 
 .carrier{
@@ -304,6 +401,15 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   border: 2px solid #922415;
   font-weight: 500;
   color: #922415;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carrier:hover {
+  background-color: #922415;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(146, 36, 21, 0.2);
 }
 
 .hero__title{
@@ -401,6 +507,13 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   padding-bottom: 10px;
   text-align: center;
   box-shadow: 0 2px 14px rgba(151, 156, 118, 0.274);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.problem-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(151, 156, 118, 0.4);
 }
 
 .problem-card__title {
@@ -453,6 +566,15 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   width: 100%;
   height: auto;
   margin-top: 40px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.direct-route-item-1-img img {
+  transition: transform 0.3s ease;
+}
+
+.direct-route-item-1-img:hover img {
+  transform: scale(1.05);
 }
 
 .direct-route-cards {
@@ -478,6 +600,13 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   padding: 24px 28px;
   max-width: 685px;
   text-align: left;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.direct-route-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(17, 24, 39, 0.2);
 }
 
 .direct-route-card h4 {
