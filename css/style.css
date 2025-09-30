@@ -222,6 +222,31 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   animation: float 3s ease-in-out infinite;
 }
 
+/* Последовательные анимации с задержками */
+.animate-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-4 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-5 {
+  animation-delay: 0.5s;
+}
+
+.animate-delay-6 {
+  animation-delay: 0.6s;
+}
+
 /* Скрытие элементов до анимации */
 .animate-on-scroll {
   opacity: 0;
@@ -257,12 +282,16 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 .header {
   padding: 24px 0;
   background: #ffffff;
+  position: relative;
+  z-index: 1000;
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1001;
 }
 
 
@@ -293,7 +322,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .header__link {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   color: rgba(11,18,32,0.85);
   transition: color .15s ease, transform .12s ease;
@@ -315,7 +344,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   display: inline-block;
   font-weight: 400;
   font-size: 14px;
-  padding: 18px 24px;
+  padding: 16px 24px;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(139,43,32,0.12);
   border: none;
@@ -331,8 +360,115 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 }
 
 
+/* Language Selector */
+.header__language {
+  position: relative;
+
+  margin-right: 24px;
+}
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 14px;
+  color: rgba(11,18,32,0.85);
+}
+
+.language-btn:hover {
+  background-color: rgba(11,18,32,0.05);
+  color: #0b1220;
+}
+
+.language-icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.language-icon img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.language-text {
+  font-weight: 500;
+}
+
+.language-arrow {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.language-selector.active .language-arrow {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.1);
+  min-width: 120px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 9999;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.language-selector.active .language-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-option {
+  display: block;
+  padding: 12px 16px;
+  color: rgba(11,18,32,0.85);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.language-option:last-child {
+  border-bottom: none;
+}
+
+.language-option:hover {
+  background-color: rgba(146,36,21,0.1);
+  color: #922415;
+}
+
+.language-option.active {
+  background-color: rgba(146,36,21,0.15);
+  color: #922415;
+  font-weight: 600;
+}
+
 .header__nav > .header__btn {
-  margin-left: 24px;
+  margin-left: 0;
 }
 
 
@@ -351,7 +487,8 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 /* hero */
 .hero {
-    padding: 24px 0;
+  margin-top: 140px;
+    padding: 36px 0;
 }
 
 .hero__container {
@@ -362,7 +499,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .hero__content {
     flex: 1;
-    max-width: 1000px;
+    max-width: 699px;
 }
 
 .hero_btn {
@@ -377,7 +514,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .shipper{
   background-color: #922415;
-  width: 174px;
+  width: 229px;
   height: 56px;
   border-radius: 8px;
   border: none;
@@ -413,7 +550,8 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 }
 
 .hero__title{
-    font-size: 60px;
+    font-size: 56px;
+    font-weight: 500px;
     line-height: 72px;
 }
 
@@ -429,7 +567,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
     .hero__content {
         max-width: 100%;
-        margin-bottom: 20px;
+       margin-bottom: 20px;
     }
 }
 

@@ -103,4 +103,46 @@ document.addEventListener('DOMContentLoaded', function() {
     images.forEach(img => {
         img.classList.add('float');
     });
+
+
+    const languageBtn = document.querySelector('.language-btn');
+    const languageSelector = document.querySelector('.language-selector');
+    const languageOptions = document.querySelectorAll('.language-option');
+    const languageText = document.querySelector('.language-text');
+
+    if (languageBtn && languageSelector) {
+
+        languageBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            languageSelector.classList.toggle('active');
+        });
+
+      
+        document.addEventListener('click', (e) => {
+            if (!languageSelector.contains(e.target)) {
+                languageSelector.classList.remove('active');
+            }
+        });
+
+      
+        languageOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const selectedLang = option.getAttribute('data-lang');
+                const selectedText = option.textContent;
+                
+                
+                languageText.textContent = selectedText;
+       
+                languageOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                
+        
+                languageSelector.classList.remove('active');
+                
+    
+                console.log('Selected language:', selectedLang);
+            });
+        });
+    }
 });
