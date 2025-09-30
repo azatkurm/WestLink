@@ -626,7 +626,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   left: 50%;
   top: 0;
   transform: translate(-50%, -51%); 
-  width: 520px;        
+  width: 300px;        
   max-width: 74%;      
   z-index: 2;
   pointer-events: none;
@@ -644,8 +644,9 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   background: #fff;
   border-radius: 18px;
   border: none;
-  min-height: 330px;         
-  padding-top: 200px;
+  max-width: 790px;
+  min-height: 300px;         
+  padding-top: 140px;
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 10px;
@@ -662,7 +663,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .problem-card__title {
   margin: 0 0 12px;
-  font-weight: 800;
+  font-weight: 500;
   font-size: 30px;
   color: #1d1f24;
 }
@@ -693,8 +694,10 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .direct-route-title {
   font-size: clamp(24px, 3.2vw, 34px);
-  font-weight: 800;
-  margin-bottom: 12px;
+  font-weight: 700;
+  max-width: 1620px;
+  margin: 0 auto 12px;
+  text-align: center;
 }
 .direct-route-subtitle {
   margin: 0 auto;
@@ -734,6 +737,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   align-items: center;
   justify-content: center;
   gap: 160px;
+  margin-top: 100px;
 }
 
 .direct-route-card {
