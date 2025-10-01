@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/advantages.css">
 </head>
 <body>
     <header class="header">
@@ -16,6 +17,14 @@
                 <img src="./images/logo/West_logo.png" alt="WestLink logo">
                 <img src="./images/logo/WestLink.png" alt="WestLink logo title">
             </a>
+
+            <!-- Burger Menu Button -->
+            <button class="burger-menu" aria-label="Открыть меню">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+
             <nav class="header__nav fade-in-up animate-delay-2">
                 <ul class="header__list">
                     <li class="header__item"><a href="#" class="header__link">Как это работает</a></li>
@@ -95,7 +104,7 @@
     
     </div>
 
-     <!-- второй ряд -->
+    <!-- второй ряд -->
      <div class="problem__grid">
       <!-- карточки -->
       <div class="problem-item fade-in-up">
@@ -193,12 +202,254 @@
   </div>
 </section>
 <section class="advantages">
-<h2 class="advantages__title">Ваш центр управления перевозками</h2>
-<p class="advantages__subtitle">Наша платформа объединяет все необходимые инструменты для эффективного управления полным циклом перевозки, от бронирования до оплаты.</p>
- 
+  <div class="container advantages__container">
+    <h2 class="advantages__title fade-in-up">Ваш центр управления перевозками</h2>
+    <p class="advantages__subtitle fade-in-up">Наша платформа объединяет все необходимые инструменты для эффективного управления полным циклом перевозки, от бронирования до оплаты.</p>
+    
+    <div class="advantages__grid">
+      <!-- Первый ряд -->
+      <div class="advantages-card fade-in-up">
+        <div class="advantages-card__icon">
+          <img src="./images/advantages/advantages-img-1.png" alt="Динамический рынок">
+        </div>
+        <h3 class="advantages-card__title">Динамический рынок предложений</h3>
+        <p class="advantages-card__text">Грузоотправители получают конкурентные предложения напрямую от проверенных перевозчиков, обеспечивая справедливые рыночные цены. Перевозчики получают доступ к постоянному потоку качественных грузов.</p>
+      </div>
+
+      <div class="advantages-card fade-in-up">
+        <div class="advantages-card__icon">
+          <img src="./images/advantages/advantages-img-2.png" alt="Безопасные платежи">
+        </div>
+        <h3 class="advantages-card__title">Безопасные эскроу-платежи</h3>
+        <p class="advantages-card__text">Средства грузоотправителя резервируются до начала перевозки и автоматически перечисляются перевозчику после подтверждения доставки, гарантируя оплату.
+        </p>
+      </div>
+
+      <div class="advantages-card fade-in-up">
+        <div class="advantages-card__icon">
+          <img src="./images/advantages/advantages-img-3.png" alt="Отслеживание">
+        </div>
+        <h3 class="advantages-card__title">Отслеживание перевозки в реальном времени</h3>
+        <p class="advantages-card__text">Единая панель управления обеспечивает полное отслеживание местоположения и статуса вашей отправки в реальном времени с момента погрузки до финальной доставки.</p>
+      </div>
+
+      <!-- Второй ряд -->
+      <div class="advantages-card fade-in-up">
+        <div class="advantages-card__icon">
+          <img src="./images/advantages/advantages-img-4.png" alt="Проверенные перевозчики">
+        </div>
+        <h3 class="advantages-card__title">Профили проверенных перевозчиков</h3>
+        <p class="advantages-card__text">Мы проверяем каждого перевозчика на наличие страховки, историю безопасности и производительности. Грузоотправители могут изучать подробные профили, чтобы уверенно выбрать подходящего партнера.
+        </p>
+      </div>
+
+      <div class="advantages-card fade-in-up">
+        <div class="advantages-card__icon">
+          <img src="./images/advantages/advantages-img-5.png" alt="Прямая коммуникация">
+        </div>
+        <h3 class="advantages-card__title">Центр прямой коммуникации без языкового барьера</h3>
+        <p class="advantages-card__text">Выделенный чат в реальном времени для каждого груза позволяет грузоотправителям и перевозчикам мгновенно координировать действия, обмениваться документами и решать проблемы без задержек со стороны посредников.
+        </p>
+      </div>
+
+      <div class="advantages-card fade-in-up">
+        <div class="advantages-card__icon">
+          <img src="./images/advantages/advantages-img-6.png" alt="Защищенный обмен">
+        </div>
+        <h3 class="advantages-card__title">Защищенный обмен документами</h3>
+        <p class="advantages-card__text">Безопасно обменивайтесь всеми необходимыми документами по каждой перевозке. Наша платформа работает как защищенный канал, который подтверждает получение документов для предотвращения споров и запуска оплаты, без долгосрочного хранения ваших конфиденциальных файлов.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="workflow">
+  <div class="container workflow__container">
+    <h2 class="workflow__title fade-in-up">Одна платформа. Один процесс. Все под контролем</h2>
+    <p class="workflow__subtitle fade-in-up">Наша платформа — это единый источник создающий четкий, проверенный путь от размещения груза до финальной оплаты.</p>
+    
+    <!-- Desktop Image -->
+    <div class="workflow__image workflow__image--desktop fade-in-up">
+      <img src="./images/workflow/workflow-img.png" alt="Процесс работы платформы">
+    </div>
+
+    <!-- Mobile Images -->
+    <div class="workflow__mobile">
+      <div class="workflow__image workflow__image--mobile-right fade-in-up">
+        <img src="./images/workflow/workflow-img-mobile-left.png" alt="Процесс для перевозчика">
+      </div>
+      <div class="workflow__image workflow__image--mobile-left fade-in-up">
+        <img src="./images/workflow/workflow-img-mobile-right.png" alt="Процесс для грузоотправителя">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video-section">
+  <div class="container video-section__container">
+    <h2 class="video-section__title fade-in-up">Посмотрите, как это работает</h2>
+    
+    <div class="video-wrapper fade-in-up">
+      <div class="video-container">
+        <video id="mainVideo" class="video-player" poster="./images/header/5334750489084032261 1.png">
+          <source src="./video/0916.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео тег.
+        </video>
+        
+        <!-- Custom Video Controls -->
+        <div class="video-controls">
+          <button class="video-control video-control--play" id="playPauseBtn">
+            <svg class="play-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg class="pause-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+              <rect x="6" y="4" width="4" height="16"></rect>
+              <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+          </button>
+          
+          <div class="video-progress">
+            <div class="video-progress-bar" id="progressBar"></div>
+          </div>
+          
+          <div class="video-time">
+            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+          </div>
+          
+          <button class="video-control video-control--fullscreen" id="fullscreenBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Play Overlay -->
+        <div class="video-overlay" id="videoOverlay">
+          <button class="video-play-large" id="playLargeBtn">
+            <svg viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="38" stroke="#ffffff" stroke-width="2" fill="rgba(146,36,21,0.9)"/>
+              <polygon points="32,24 32,56 56,40" fill="#ffffff"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="roadmap">
+  <div class="container roadmap__container">
+    <h2 class="roadmap__title fade-in-up">Наша дорожная карта</h2>
+    
+    <!-- Desktop Roadmap -->
+    <div class="roadmap__image roadmap__image--desktop fade-in-up">
+      <img src="./images/roadmap/roadmap.png" alt="Дорожная карта">
+    </div>
+
+    <!-- Mobile Roadmap -->
+    <div class="roadmap__image roadmap__image--mobile fade-in-up">
+      <img src="./images/roadmap/roadmap-mobile.png" alt="Дорожная карта">
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container cta__container">
+    <div class="cta__content">
+      <h2 class="cta__title fade-in-up">Определите будущее прямых грузоперевозок уже <span class="highlight">сегодня</span></h2>
+      <p class="cta__subtitle fade-in-up">Это больше, чем платформа — это новая сеть для торговли между Азией и Западом, и мы строим ее вместе с нашими партнерами. Мы приглашаем избранную группу прогрессивных грузоотправителей и перевозчиков получить эксклюзивный доступ, увидеть наш работающий интерфейс и помочь нам создать инструмент, который определит будущее этой индустрии.</p>
+      
+      <div class="cta__benefits">
+        <div class="cta-benefit fade-in-up">
+          <img src="./images/icons/Check Circle.png" alt="Проверено" class="cta-benefit__icon">
+          <div class="cta-benefit__content">
+            <h3 class="cta-benefit__title">Участвовать в проектировании платформы</h3>
+            <p class="cta-benefit__text">Получите прямую связь с нашей командой продукта. Ваши отзывы не просто будут услышаны — они напрямую повлияют на нашу дорожную карту и интерфейс. То, что вы видите здесь, — это только начало.</p>
+          </div>
+        </div>
+
+        <div class="cta-benefit fade-in-up">
+          <img src="./images/icons/Check Circle.png" alt="Проверено" class="cta-benefit__icon">
+          <div class="cta-benefit__content">
+            <h3 class="cta-benefit__title">Получить эксклюзивный ранний доступ</h3>
+            <p class="cta-benefit__text">Будьте первыми, кто воспользуется нашими рабочими инструментами — от чата в реальном времени до панели отслеживания. Протестируйте и освойте платформу до того, как о ней узнают ваши конкуренты.</p>
+          </div>
+        </div>
+
+        <div class="cta-benefit fade-in-up">
+          <img src="./images/icons/Check Circle.png" alt="Проверено" class="cta-benefit__icon">
+          <div class="cta-benefit__content">
+            <h3 class="cta-benefit__title">Присоединиться к сети первопроходцев</h3>
+            <p class="cta-benefit__text">Присоединяйтесь к избранному сообществу самых инновационных грузоотправителей и надежных перевозчиков в регионе. Это ваша возможность построить фундаментальные отношения с будущими лидерами этой сети.</p>
+      </div>
+      </div>
+
+        <div class="cta-benefit fade-in-up">
+          <img src="./images/icons/Check Circle.png" alt="Проверено" class="cta-benefit__icon">
+          <div class="cta-benefit__content">
+            <h3 class="cta-benefit__title">Стать пожизненным стратегическим партнером</h3>
+            <p class="cta-benefit__text">Это долгосрочные отношения. Партнеры-основатели получат особый статус и льготы на все время существования платформы, укрепляя вашу позицию лидера в более умной экосистеме грузоперевозок.</p>
+      </div>
+      </div>
+    </div>
+
+      <div class="cta__buttons fade-in-up">
+        <a href="#" class="cta-btn cta-btn--telegram">
+          <img src="./images/icons/telegram-icon.png" alt="Telegram">
+          Присоединиться к каналу основателей
+        </a>
+        <a href="#" class="cta-btn cta-btn--phone">
+          <img src="./images/icons/phone.png" alt="Телефон">
+          Связаться с командой
+        </a>
+      </div>
+    </div>
+ 
+    <div class="cta__image fade-in-right">
+      <img src="./images/header/5334750489084032261 1.png" alt="WestLink Platform">
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__main">
+      <!-- Logo and Description -->
+      <div class="footer__about">
+        <div class="footer__logo">
+          <img src="./images/logo/West_logo.png" alt="WestLink logo">
+          <img src="./images/logo/WestLink.png" alt="WestLink">
+        </div>
+        <p class="footer__tagline">Прямые, безопасные, эффективные перевозки.</p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="footer__nav">
+        <h4 class="footer__title">Навигация</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Как это работает</a></li>
+          <li><a href="#" class="footer__link">Ключевые функции</a></li>
+          <li><a href="#" class="footer__link">Дорожная карта</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Info -->
+      <div class="footer__legal">
+        <h4 class="footer__title">Правовая информация</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Политика конфиденциальности</a></li>
+          <li><a href="#" class="footer__link">Условия и положения</a></li>
+        </ul>
+      </div>
+
+      <!-- Copyright -->
+      <p class="footer__copyright">© 2025 WestLink. Все права защищены.</p>
+    </div>
+  </div>
+</footer>
 
     <script src="./main/main.js"></script>
     <script src="./main/animations.js"></script>
+    <script src="./main/video-player.js"></script>
 </body>
 </html>
