@@ -1,25 +1,38 @@
-
 document.addEventListener('DOMContentLoaded', function() {
 
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.2,
+        rootMargin: '0px 0px -150px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
     }, observerOptions);
 
-  
-    const animatedElements = document.querySelectorAll('.problem-item, .direct-route-card, .problem__title, .problem__subtitle, .direct-route-title, .direct-route-subtitle');
+
+    const animatedElements = document.querySelectorAll(
+        '.problem-item, .direct-route-card, .advantages-card, ' +
+        '.problem__title, .problem__subtitle, ' +
+        '.direct-route-title, .workflow__title, .workflow__subtitle, ' +
+        '.video-section__title, .video-section__subtitle, ' +
+        '.cta__title, .cta__subtitle, .cta-benefit, ' +
+        '.roadmap__title, .roadmap__image, ' +
+        '.video-wrapper, .cta__buttons, .cta__image, .direct-route-item-1-img, .direct-route-item-1-cards'
+    );
     
-    animatedElements.forEach((el, index) => {
-        el.classList.add('animate-on-scroll');
-        el.style.transitionDelay = `${index * 0.1}s`;
+    animatedElements.forEach((el) => {
+    
+        if (!el.closest('.header') && !el.closest('.hero')) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 1s ease-out';
+        }
         observer.observe(el);
     });
 
@@ -102,6 +115,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.problem-item__img img, .direct-route-item-1-img img');
     images.forEach(img => {
         img.classList.add('float');
+    });
+
+
+    const advantageIcons = document.querySelectorAll('.advantages-card__icon img');
+    advantageIcons.forEach((icon, index) => {
+        setTimeout(() => {
+            icon.style.animation = 'float 4s ease-in-out infinite';
+            icon.style.animationDelay = `${index * 0.3}s`;
+        }, 1000 + index * 100);
     });
 
 
