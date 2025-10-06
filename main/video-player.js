@@ -17,15 +17,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     video.addEventListener('loadeddata', () => {
         video.play().then(() => {
-           
+            // Видео успешно запустилось
             videoContainer.classList.add('playing');
             if (playIcon) playIcon.style.display = 'none';
             if (pauseIcon) pauseIcon.style.display = 'block';
+            // Скрываем overlay при автоплее
+            if (videoOverlay) {
+                videoOverlay.style.display = 'none';
+            }
         }).catch(e => {
             console.log('Автоплей заблокирован браузером:', e);
-          
+            // Если автоплей заблокирован, показываем кнопку play
             if (playIcon) playIcon.style.display = 'block';
             if (pauseIcon) pauseIcon.style.display = 'none';
+            if (videoOverlay) {
+                videoOverlay.style.display = 'flex';
+            }
         });
     });
 
