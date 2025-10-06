@@ -496,7 +496,6 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 
 @media (max-width: 880px) {
-  .header__list { display: none; }
   .header__container { grid-template-columns: auto 1fr auto; }
   .header__nav { justify-self: center; }
 }
@@ -1023,6 +1022,18 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
   z-index: 1002;
 }
 
+.mobile-menu-header {
+  display: none;
+}
+
+.mobile-menu-close {
+  display: none;
+}
+
+.mobile-menu-copyright {
+  display: none;
+}
+
 .burger-line {
   width: 100%;
   height: 3px;
@@ -1068,11 +1079,11 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 100vw;
     height: 100vh;
     background: #ffffff;
     box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-    padding: 80px 30px 30px;
+    padding: 100px 30px 30px;
     transition: right 0.3s ease;
     z-index: 1001;
   }
@@ -1081,14 +1092,157 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
     right: 0;
   }
 
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .mobile-menu-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background: #ffffff;
+    z-index: 1003;
+  }
+
+  .mobile-menu-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .mobile-menu-logo img:first-child {
+    height: 40px;
+  }
+
+  .mobile-menu-logo img:last-child {
+    height: 20px;
+  }
+
+  .mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #0b1220;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close-icon {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: flex-start;
+  }
+
   .header__list {
     flex-direction: column;
     gap: 0;
+    align-items: flex-start;
+    margin-bottom: 0;
   }
 
   .header__item {
     width: 100%;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: none;
+  }
+
+  .header__link {
+    display: block;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0b1220;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .header__link:hover {
+    color: #922415;
+  }
+
+  .header__language {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    width: 100%;
+  }
+
+  .language-btn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #0b1220;
+    cursor: pointer;
+  }
+
+  .language-icon img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .language-arrow {
+    font-size: 12px;
+    color: #606266;
+  }
+
+  .language-dropdown {
+    position: static;
+    background: none;
+    box-shadow: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .language-option {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #606266;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .language-option:hover {
+    color: #922415;
+  }
+
+  .mobile-menu-copyright {
+    display: block;
+    margin-top: 200px;
+   
+ 
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-menu-copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #606266;
+    text-align: left;
   }
 
   .header__link {
@@ -1107,7 +1261,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
     width: 100%;
     justify-content: space-between;
     padding: 12px;
-    background: rgba(0,0,0,0.02);
+    background: rgba(255, 255, 255, 0.02);
   }
 
   .header__btn {
@@ -1218,7 +1372,7 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
     height: auto;
   }
 }
-/* ===== Workflow Section ===== */
+
 .workflow {
   padding: 100px 0;
   background: #ffffff;
@@ -1448,6 +1602,12 @@ html,body { background: #ffffff; margin: 0; padding: 0; font-family: 'DM Sans', 
 
 .video-container.playing .video-overlay {
   opacity: 0;
+}
+
+/* Скрыть overlay при автоплее */
+.video-player[autoplay] + .video-overlay {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .video-play-large {

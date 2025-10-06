@@ -14,6 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!video) return;
 
+
+    video.addEventListener('loadeddata', () => {
+        video.play().then(() => {
+           
+            videoContainer.classList.add('playing');
+            if (playIcon) playIcon.style.display = 'none';
+            if (pauseIcon) pauseIcon.style.display = 'block';
+        }).catch(e => {
+            console.log('Автоплей заблокирован браузером:', e);
+          
+            if (playIcon) playIcon.style.display = 'block';
+            if (pauseIcon) pauseIcon.style.display = 'none';
+        });
+    });
+
    
     function formatTime(seconds) {
         const mins = Math.floor(seconds / 60);
@@ -74,10 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     video.addEventListener('ended', () => {
-        videoContainer.classList.remove('playing');
-        playIcon.style.display = 'block';
-        pauseIcon.style.display = 'none';
-        video.currentTime = 0;
+    
     });
 
 
