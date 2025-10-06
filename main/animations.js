@@ -37,14 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    const heroImage = document.querySelector('.direct-route-item-1-img img');
-    if (heroImage) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = scrolled * 0.5;
-            heroImage.style.transform = `translateY(${parallax}px)`;
-        });
-    }
+    // Removed parallax effect that pushed the direct-route image down on scroll
 
 
     const titles = document.querySelectorAll('.problem__title, .direct-route-title');
@@ -112,7 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    const images = document.querySelectorAll('.problem-item__img img, .direct-route-item-1-img img');
+    // Apply floating only to problem icons; disable for direct-route image to prevent bouncing
+    const images = document.querySelectorAll('.problem-item__img img');
     images.forEach(img => {
         img.classList.add('float');
     });
