@@ -1,4 +1,4 @@
-
+// ==== Языковое меню в хедере ====
 const langBtn = document.getElementById('langBtn');
 const langMenu = document.getElementById('langMenu');
 
@@ -20,6 +20,7 @@ if (langBtn && langMenu) {
   });
 }
 
+// ==== Языковое меню в бургер-меню ====
 const mobileLangBtn = document.getElementById('mobileLangBtn');
 const mobileLangMenu = document.getElementById('mobileLangMenu');
 
@@ -41,7 +42,7 @@ if (mobileLangBtn && mobileLangMenu) {
   });
 }
 
-
+// ==== Закрытие языковых меню при клике вне ====
 document.addEventListener('click', (e) => {
   if (langMenu && !langBtn.contains(e.target) && !langMenu.contains(e.target)) {
     langMenu.style.display = 'none';
@@ -54,7 +55,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
-
+// ==== Бургер меню ====
 const burgerBtn = document.getElementById('burgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 const closeMenu = document.getElementById('closeMenu');
@@ -81,15 +82,16 @@ const btn   = document.getElementById('mobileLangBtn');
 const menu  = document.getElementById('mobileLangMenu');
 
 btn.addEventListener('click', () => {
-  btn.classList.toggle('open');   
-  menu.classList.toggle('show');  
+  btn.classList.toggle('open');   // стрелка вращается
+  menu.classList.toggle('show');  // меню появляется / скрывается
 });
 
+// подсветка выбранного языка
 menu.addEventListener('click', e=>{
   if(e.target.tagName==='LI'){
     menu.querySelectorAll('li').forEach(li=>li.classList.remove('active'));
     e.target.classList.add('active');
-    btn.querySelector('span').textContent=e.target.textContent.split(' ')[0]; 
+    btn.querySelector('span').textContent=e.target.textContent.split(' ')[0]; // Рус / Қазақша / …
     btn.classList.remove('open');
     menu.classList.remove('show');
   }
