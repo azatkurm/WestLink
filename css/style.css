@@ -2,7 +2,10 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
-/* === Общие элементы === */
+html, body {
+  overflow-x: hidden;
+}
+
 li {
   list-style: none;
   margin: 0;
@@ -14,23 +17,20 @@ li {
   background: #fff;
 }
 
-/* Контейнер */
 .header .container {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 20px;
 }
-/* ───────────—  HEADER / MOBILE MENU  —─────────── */
-/* логотип */
+
 .logo{
   display:flex;
   align-items:center;
   gap:10px;
 }
-.logo-w        {width:200px;height:auto;}
+.logo-w        {width:130px;height:auto;}
 .logo-title    {width:164px;height:auto;}
 
-/* ---------- DESKTOP NAVBAR ---------- */
 .navbar{
   display:flex;
   justify-content:space-between;
@@ -49,8 +49,9 @@ li {
 }
 .nav-links a:hover{color:#555;}
 
-/* CTA-кнопка в шапке */
-.nav-btn{
+.nav-btn,
+.nav-btn:link,
+.nav-btn:visited{
   width:264px;height:54px;
   background:#922415;
   color:#fff;
@@ -59,15 +60,15 @@ li {
   border-radius:6px;
   cursor:pointer;
   font:700 16px "DM Sans",sans-serif;
+  text-decoration:none; 
 }
 
-/* ---------- DESKTOP LANGUAGE DROPDOWN ---------- */
 .lang-select{position:relative;display:inline-block;}
 .lang-btn{
   display:flex;align-items:center;gap:6px;
   padding:12px 0;
   border:0;background:#fff;cursor:pointer;
-  font:600 18px "DM Sans",sans-serif;color:#111827;
+  font:500 18px "DM Sans",sans-serif;color:#111827;
 }
 .lang-btn .arrow{transition:transform .25s}
 .lang-btn.open .arrow{transform:rotate(180deg)}
@@ -85,10 +86,10 @@ li {
 .lang-menu li:hover{background:#f9fafb;color:#922415}
 .lang-menu li.active{background:#fdf3f2;color:#922415;font-weight:600}
 
-/* ---------- BURGER ---------- */
+
 .burger{display:none;background:none;border:0;cursor:pointer}
 
-/* ---------- MOBILE OFF-CANVAS MENU ---------- */
+
 .mobile-menu{
   position:fixed;top:0;right:-110%;
   width:90%;height:100vh;z-index:1000;
@@ -98,7 +99,7 @@ li {
 }
 .mobile-menu.open{right:0}
 
-/* верхняя строка */
+
 .mobile-header{
   display:flex;justify-content:space-between;align-items:center;
   margin-bottom:40px;
@@ -108,19 +109,19 @@ li {
 }
 .close-btn img{width:100%;height:100%}
 
-/* ссылки меню */
+
 .mobile-menu ul{margin:151px 0 0;padding-inline-start:10px}
 .mobile-menu-links-li{margin-bottom:48px}
 .mobile-menu-links{
-  font:500 24px "DM Sans",sans-serif;color:#111827;text-decoration:none;
+  font:500 20px "DM Sans",sans-serif;color:#111827;text-decoration:none;
 }
 
-/* ---------- MOBILE LANGUAGE DROPDOWN ---------- */
+
 .mobile-lang{position:relative}
 #mobileLangBtn{
-  display:flex;align-items:center;justify-content:flex-start;/* стрелка рядом */
+  display:flex;align-items:center;justify-content:flex-start;
   gap:6px;width:100%;padding:14px 0;border:0;background:#fff;
-  font:500 24px "DM Sans",sans-serif; /* обычный вес */
+  font:500 20px "DM Sans",sans-serif;
   color:#111827;cursor:pointer;
 }
 #mobileLangBtn .arrow{transition:transform .25s}
@@ -140,13 +141,11 @@ li {
 .mobile-lang .lang-menu li:hover{background:#f9fafb;color:#922415}
 .mobile-lang .lang-menu li.active{background:#fdf3f2;color:#922415;font-weight:600}
 
-/* ---------- MOBILE FOOTER INSIDE MENU ---------- */
 .mobile-footer-burger{text-align:left;margin-top:auto}
 .mobile-footer-burger .nav-btn{width:100%;margin-bottom:20px}
 .mobile-footer-burger hr{border:0;border-top:1px solid #eee;margin:10px 0}
 .mobile-footer-burger p{font:13px "DM Sans",sans-serif;color:#777}
 
-/* ---------- BREAKPOINTS ---------- */
 @media (max-width:1131px){
   .navbar{padding:20px 5px}
   .nav-links, .nav-btn{display:none}
@@ -160,7 +159,6 @@ li {
 
 
 
-/* === HERO BASE === */
 .hero {
   
   padding-top: 100px;
@@ -242,7 +240,6 @@ li {
   height: auto;
 }
 
-/* === TABLET (до 1024px) === */
 @media (max-width: 1024px) {
   .hero {
     padding-top: 80px;
@@ -280,10 +277,9 @@ li {
     text-align: center;
   }
 }
-/* === MOBILE (до 768px) === */
 @media (max-width: 768px) {
   .logo img{
-    width: 90px;
+    width: 130px;
     
   }
 
@@ -313,12 +309,11 @@ li {
     margin-bottom: 24px;
   }
 
-  /* Кнопки */
   .hero__buttons {
     flex-direction: column;
     gap: 12px;
     width: 100%;
-    align-items: stretch; /* растянуть кнопки по ширине */
+    align-items: stretch; 
   }
 
   .hero__button {
@@ -352,9 +347,7 @@ li {
     height: auto;
   }
 }
-/* --------------------------------------------------------- */
-/* ====================  PROBLEMS  ========================= */
-/* --------------------------------------------------------- */
+
 .problems{
   padding:100px 0;
   background:#fff;
@@ -373,20 +366,18 @@ li {
   margin:0 auto 80px;
 }
 
-/* ========== GRID  (дефолт — 2×N) ========== */
 .problems__grid{
   margin-top:200px;
   display:grid;
-  /* две колонки до самого планшета */
+ 
   grid-template-columns:repeat(2,minmax(350px,790px));
-  gap:220px 100px;          /* row  | col  */
-  place-content:center;     /* центр всей сетки          */
-  place-items:center;       /* центр отдельной карточки  */
-  padding:0 40px;           /* симметричные поля */
+  gap:220px 100px;          
+  place-content:center;    
+  place-items:center;       
+  padding:0 40px;           
   box-sizing:border-box;
 }
 
-/* ===================  CARD  =================== */
 .problems__item{
   position:relative;
   max-width:790px; width:100%;
@@ -402,7 +393,6 @@ li {
   box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
-/* icon “выезжает” ► */
 .problems__icon{
   position:absolute;
   top:-45%; left:50%; transform:translateX(-50%);
@@ -410,7 +400,6 @@ li {
 }
 .icon6{ width:320px; }
 
-/* текста */
 .problems__item-title{
 
   font:600 18px/1.3 'DM Sans',sans-serif;
@@ -424,14 +413,9 @@ li {
   margin:0 auto;
 }
 
-/* ========================================================= */
-/* ===============  BREAKPOINTS  ============================ */
-/* ========================================================= */
 
-/* ---------- “узкий десктоп” ≤ 1400 px  -------------------- */
 @media (max-width:1400px){
   .problems__grid{
-    /* всё ещё две колонки, но карточки чуть уже */
     grid-template-columns:repeat(2,minmax(300px,1fr));
     gap:180px 80px;
     padding:0 30px;
@@ -440,7 +424,6 @@ li {
   .problems__icon{ width:220px; top:-40%; }
 }
 
-/* ---------- Планшеты ≤ 1024 px  --------------------------- */
 @media (max-width:1126px){
   .problems{ padding:80px 0; }
   .problems__title{
@@ -448,8 +431,7 @@ li {
     margin-bottom:60px; padding:0 18px;
   }
   .problems__grid{
-    /* ДВЕ колонки сохраняем,
-       но вертикальный шаг меньше */
+    
     gap:140px 48px;
     padding:0 24px;
   }
@@ -460,7 +442,6 @@ li {
   .problems__icon{ width:180px; top:-38%; }
 }
 
-/* ---------- Мобилки ≤ 768 px  ----------------------------- */
 @media (max-width:1052px){
   .problems{ padding:60px 0; }
   .problems__title{
@@ -468,7 +449,7 @@ li {
     margin-bottom:40px;
   }
   .problems__grid{
-    grid-template-columns:1fr;      /* одна колонка */
+    grid-template-columns:1fr;      
     margin-top:100px;
     gap:90px;
     padding:0 20px;
@@ -486,7 +467,7 @@ li {
 
 
 
-/* ---------- SOLUTION SECTION ---------- */
+
 .solution {
   padding: 100px 0;
   background: #fff;
@@ -499,7 +480,6 @@ li {
   box-sizing: border-box;
 }
 
-/* ---------- TITLE ---------- */
 .solution__title {
   font-family: 'DM Sans', sans-serif;
   font-weight: 600;
@@ -511,22 +491,19 @@ li {
   text-align: center;
 }
 
-/* ---------- BODY (layout) ---------- */
 .solution__body {
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* картинка слева, список справа */
+  grid-template-columns: 1fr 1fr;   
   gap: 80px;
   align-items: center;
 }
 
-/* ---------- IMAGE ---------- */
 .solution__image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* ---------- LIST ---------- */
 .solution__list {
   list-style: none;
   margin: 0;
@@ -566,7 +543,6 @@ li {
   margin: 0;
 }
 
-/* ---------- LAPTOP (≤ 1024 px) ---------- */
 @media (max-width: 1024px) {
   .solution {
     padding: 80px 0;
@@ -579,9 +555,11 @@ li {
   }
 
   .solution__body {
-    grid-template-columns: 1fr;      /* картинка сверху, список снизу */
+    grid-template-columns: 1fr;     
     gap: 48px;
   }
+
+  .solution__list { align-items: center; }
 
   .solution__image {
     max-width: 600px;
@@ -589,7 +567,6 @@ li {
   }
 }
 
-/* ---------- MOBILE (≤ 768 px) ---------- */
 @media (max-width: 768px) {
   .solution {
     padding: 60px 0;
@@ -621,9 +598,7 @@ li {
 
 
 
-/* ===== FEATURES SECTION ===== */
 .features {
-  padding: 100px 0;
   background: #fff;
 }
 
@@ -653,24 +628,22 @@ li {
   margin: 0 auto 80px;
 }
 
-/* ===== GRID ===== */
 .features__grid {
   margin-top: 168px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 160px 0px;     /* ← 160 px по вертикали, 40 px по горизонтали  */
+  gap: 160px 0px;     
   justify-items: center;
   padding: 0 40px;
   box-sizing: border-box;
 }
 
-/* ===== CARD ===== */
 .feature-card {
   position: relative;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  padding: 80px 32px 40px;  /* верхний паддинг под иконку */
+  padding: 80px 32px 40px;  
   max-width: 518.67px;
   width: 100%;
   text-align: center;
@@ -682,10 +655,8 @@ li {
   box-shadow: 0 6px 20px rgba(0,0,0,.08);
 }
 
-/* “ghost”-карточка (центральная) выглядит так же */
 .feature-card--ghost {}
 
-/* ===== ICON ===== */
 .feature-card__icon {
   position: absolute;
   top: -170px;
@@ -700,7 +671,6 @@ li {
   top: -150px;
 }
 
-/* ===== TEXT ===== */
 .feature-card__title {
   font-weight: 600;
   font-size: 18px;
@@ -716,14 +686,12 @@ li {
   margin: 0;
 }
 
-/* ---------- Ноутбук / планшет (≤1200 px) — 2×3 ---------- */
 @media (max-width: 1876px) {
  .features__grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 140px 32px;   /* запас остаётся ≥ вылезающей иконки */
+    gap: 140px 32px;   
   }
 }
-/* ---------- Десктоп ≤1400 px ---------- */
 @media (max-width:1400px){
   .features__grid{
     grid-template-columns:repeat(1,minmax(280px,1fr));
@@ -731,26 +699,24 @@ li {
   }
 }
 
-/* ----- TABLET (≤1024px) ----- */
 @media (max-width:1024px){
-  .features{ padding:80px 0; }
+  .features{ padding:10px 0; }
   .features__title   { font-size:24px; line-height:32px; }
   .features__subtitle{ font-size:15px; line-height:24px; margin-bottom:10px; }
 
-  .features__grid{ gap:120px 32px; }      /* 2 компактные колонки */
+  .features__grid{ gap:120px 32px; }      
   .feature-card     { padding:100px 24px 32px; max-width:500px; }
   .feature-card__icon{ width:250px; top:-100px; }
   .feature-6{ width:220px; top:-90px; }
 }
 
-/* ----- MOBILE (≤768px) ----- */
 @media (max-width:768px){
   .features{ padding:60px 0; }
   .features__title   { font-size:20px; line-height:28px; }
   .features__subtitle{ font-size:14px; line-height:22px; margin-bottom:10px; }
 
   .features__grid{
-    grid-template-columns:1fr;      /* одна колонка */
+    grid-template-columns:1fr;      
     gap:80px; padding:0 16px;
   }
   .feature-card      { padding:100px 20px 24px; max-width:100%; }
@@ -761,9 +727,8 @@ li {
 
 
 
-/* ===== HOW-IT-WORKS SECTION ===== */
 .how-it-works {
-  padding: 100px 0;
+  padding-top: 80px;
   background: #fff;
 }
 
@@ -793,7 +758,6 @@ li {
   margin: 0 auto 80px;
 }
 
-/* ===== SCHEMES ===== */
 .how-it-works__scheme {
   width: 100%;
   height: auto;
@@ -801,10 +765,8 @@ li {
   margin: 0 auto;
 }
 
-/* десктоп показываем, мобайл прячем */
 .how-it-works__scheme--mobile { display: none; }
 
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .how-it-works {
     padding: 60px 0;
@@ -822,46 +784,40 @@ li {
     margin-bottom: 40px;
   }
 
-  /* меняем видимые схемы */
   .how-it-works__scheme--desktop { display: none; }
   .how-it-works__scheme--mobile  { display: block; margin-bottom: 24px; }
 }
 
 
-/* ---------- DEMO VIDEO SECTION ---------- */
 .demo {
   padding: 100px 0;
   background: #fff;
 }
 
 .demo__container {
-  max-width: 1920px;
+  max-width: none;           
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;                
   box-sizing: border-box;
 
-  /* центрируем всё, что внутри */
   display: flex;
-  justify-content: center;   /* горизонтально */
+  justify-content: center;  
 }
 
 .demo__video {
   width: 100%;
-  max-width: 1760px;         /* ограничиваем ширину при ultra-wide */
+  max-width: none;         
   height: auto;
   display: block;
-  border-radius: 12px;
+  border-radius: 0;          
   object-fit: cover;
 }
 
-/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   .demo { padding: 10px 0; }
 }
 
 
-
-/* ----- ROADMAP SECTION ----- */
 .roadmap {
   padding: 100px 0;
   background: #fff;
@@ -882,7 +838,6 @@ li {
   margin-bottom: 10px;
 }
 
-/* ----- IMAGES ----- */
 .roadmap__img {
   width: 100%;
   height: auto;
@@ -890,9 +845,8 @@ li {
   margin-top: 60px;
 }
 
-.roadmap__img--mobile { display: none; } /* скрыта по умолчанию */
+.roadmap__img--mobile { display: none; } 
 
-/* ===== MOBILE (≤768 px) ===== */
 @media (max-width: 768px) {
   .roadmap {
     padding: 60px 0;
@@ -904,27 +858,23 @@ li {
     margin-bottom: 40px;
   }
 
-  /* меняем видимые картинки */
   .roadmap__img--desktop { display: none; }
   .roadmap__img--mobile  { display: block; }
 }
 
-/* ===== CTA SECTION ===== */
 .cta{
   padding:120px 0;
   background:#fff;
 }
 
 .cta__container{
-  /* главное «полотно» секции – ширина совпадает с другими блоками */
   max-width:1920px;
   margin:0 auto;
-  padding:0 80px;          /* ≈по 80 px слева-справа на десктопе */
+  padding:0 80px;         
   box-sizing:border-box;
   text-align:center;
 }
 
-/* ---------- Заголовок / подзаголовок ---------- */
 .cta__title{
   font:600 32px/40px 'DM Sans',sans-serif;
   color:#111827;
@@ -939,28 +889,25 @@ li {
   color:#374151;
 }
 
-/* ---------- GRID (чек-лист + мок-ап) ---------- */
 .cta__grid{
   display:grid;
-  grid-template-columns:1fr 1fr;      /* 2 колонки на широких экранах   */
+  grid-template-columns:1fr 1fr;     
   gap:0 80px;
   align-items:center;
   margin-bottom:48px;
 }
 
-/* ---------- LEFT: чек-лист ---------- */
 .cta__list{ list-style:none; margin:0; padding:0; text-align:left; }
 
 .cta__item{
   display:grid;
-  grid-template-columns:44px 1fr;     /* иконка + текст                 */
+  grid-template-columns:44px 1fr;     
   column-gap:24px;
   row-gap:6px;
   align-items:start;
   margin-bottom:52px;
 }
 
-/* кружок-иконка */
 .cta__icon{
   width:44px;
   height:44px;
@@ -973,7 +920,6 @@ li {
 .cta__icon img,
 .cta__icon svg{ width:22px; height:22px; fill:#fff; }
 
-/* текст пункта */
 .cta__item-title{
   font:600 28px/34px 'DM Sans',sans-serif;
   color:#111827;
@@ -985,7 +931,6 @@ li {
   margin:0;
 }
 
-/* ---------- RIGHT: макет интерфейса ---------- */
 .cta__mockup{
   display:block;
   width:100%;
@@ -994,7 +939,6 @@ li {
   margin:0 auto;
 }
 
-/* ---------- CTA-кнопки ---------- */
 .cta__buttons{
   display:flex;
   gap:8px;
@@ -1013,24 +957,16 @@ li {
 }
 .btn img{ width:18px; height:18px; }
 
-/* primary */
 .btn--primary{ background:#922415; color:#fff; }
 .btn--primary:hover{ background:#7b1d10; }
 
-/* outline */
 .btn--outline{ border:2px solid #922415; color:#922415; }
 .btn--outline:hover{ background:#fdf3f2; }
 
-/* ============================================================= */
-/* =======================  BREAKPOINTS  ======================= */
-/* ============================================================= */
-
-/* ---------- ≤ 1309 px (большой планшет / узкий ноут) ---------- */
 @media (max-width:1309px){
   .cta            { padding:80px 0; }
-  .cta__container { padding:0 40px; }   /* чуть уже поля */
+  .cta__container { padding:0 40px; }   
 
-  /* сетка в колонку, макет под текстом */
   .cta__grid      { grid-template-columns:1fr; gap:48px; }
   .cta__mockup    { order:2; }
 
@@ -1044,30 +980,27 @@ li {
   .cta__item-text        { font-size:16px; line-height:24px; }
 }
 
-/* ---------- ≤ 768 px (смартфоны) ---------- */
+
 @media (max-width:768px){
   .cta            { padding:60px 0; }
-  .cta__container { padding:0 20px; }   /* минимальные отступы */
+  .cta__container { padding:0 20px; }   
 
   .cta__title     { font-size:20px; line-height:28px; }
   .cta__subtitle  { font-size:14px; line-height:22px; margin-bottom:40px; }
 
-  /* макет идёт после списка, под ним сразу кнопки */
   .cta__mockup    { order:2; }
 
   .cta__item            { margin-bottom:32px; }
   .cta__item-title       { font-size:18px; line-height:26px; }
 
-  /* кнопки растягиваем на 100 % */
   .btn{
     width:100%;
     justify-content:center;
-    height:32px;                       /* фикс-высота для тап-зоны */
+    height:32px;                       
     font-size:14px;
   }
 }
 
-/* ===== FOOTER ===== */
 .footer{
   padding:80px 0 40px;
   background:#fff;
@@ -1075,7 +1008,6 @@ li {
   color:#111827;
 }
 
-/* общий контейнер */
 .container{
   max-width:1920px;
   margin:0 auto;
@@ -1083,15 +1015,13 @@ li {
   box-sizing:border-box;
 }
 
-/* ── Верхняя часть ───────────────────────── */
 .footer__top{
   display:grid;
-  grid-template-columns:1fr 220px 260px; /* brand | nav | legal */
+  grid-template-columns:1fr 220px 260px; 
   gap:60px;
   align-items:start;
 }
 
-/* бренд */
 .footer__logo{display:inline-block;}
 .footer__logo img{max-width:240px;height:auto;}
 
@@ -1102,7 +1032,6 @@ li {
   color:#111827;
 }
 
-/* колонки ссылок */
 .footer__heading{
   margin:0 0 18px;
   font:700 20px 'DM Sans',sans-serif;
@@ -1116,14 +1045,12 @@ li {
 }
 .footer__list a:hover{color:#922415;}
 
-/* разделительная линия перед мобильным копирайтом */
 .footer__divider{
   border:0;
   border-top:1px solid #e5e7eb;
   margin:60px 0 40px;
 }
 
-/* копирайт */
 .footer__copyright{
   font:400 15px/24px 'DM Sans',sans-serif;
   color:#374151;
@@ -1132,54 +1059,60 @@ li {
 .footer__copyright--desktop{margin-top:24px;text-align:left;}
 .footer__copyright--mobile{text-align:center;}
 
-/* ---------- Адаптив ---------- */
-/* планшеты ≤1024 px */
 @media(max-width:1024px){
   .footer{padding:60px 0 30px;}
 
   .footer__top{
-    grid-template-columns:1fr 1fr; /* brand сверху, две колонки под ним */
+    grid-template-columns:1fr 1fr;
     gap:48px 60px;
   }
   .footer__legal{order:1;}
   .footer__nav{order:2;}
 }
-/* —— мобильные ≤768 px  (бренд + две колонки) —— */
-/* —— телефоны (≤768 px) —— */
-@media (max-width: 768px){
+@media (max-width: 1013px){
   .footer{ padding: 40px 0 24px; }
 
-  /* 1. делаем две «авто»-колонки и центрируем сам grid */
   .footer__top{
     display:grid;
-    grid-template-columns: repeat(2, auto);   /* ширина = содержимому   */
+    grid-template-columns: repeat(2, auto);  
     grid-template-areas:
-      "brand  brand"      /* логотип + слоган на всю ширину */
-      "nav    legal";     /* слева нав, справа legal        */
-    justify-content:center;                   /* <<< центрируем блок   */
+      "brand  brand"      
+      "nav    legal";       
+    justify-content:center;                   
     gap: 40px 2px;
     text-align:center;
   }
 
-  /* 2. распределяем по именам областей */
   .footer__brand { grid-area: brand; text-align:center; }
   .footer__nav   { grid-area: nav;   text-align:left;   }
   .footer__legal { grid-area: legal; text-align:left;   }
 
-  /* 3. типографика чуть меньше */
   .footer__tagline { margin-top:16px; font-size:18px; line-height:28px; }
   .footer__heading { font-size:16px; }
   .footer__list a  { font-size:14px; }
 
-  /* 4. линия + мобильный копирайт */
   .footer__divider{ margin:48px 0 30px; }
 }
 
+@media (max-width: 480px){
+  .footer__top{
+    grid-template-columns: 1fr;            
+    grid-template-areas:
+      "brand"
+      "nav"
+      "legal";
+    justify-content: stretch;
+    text-align: left;
+    gap: 32px;
+  }
+  .footer__brand{ text-align:left; }
+}
+
 .footer__copyright--mobile,
-.footer__divider { display:none; }            /* по умолчанию прячем */
+.footer__divider { display:none; }           
 
 @media (max-width:768px){
-  .footer__copyright--desktop{ display:none; }/* desktop-версия скрыта */
+  .footer__copyright--desktop{ display:none; }
   .footer__divider,
   .footer__copyright--mobile{ display:block; text-align:center; }
 }

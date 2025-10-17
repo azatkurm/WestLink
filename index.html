@@ -24,9 +24,9 @@
       </div>
 
       <ul class="nav-links">
-        <li><a href="#">Как это работает</a></li>
-        <li><a href="#">Ключевые функции</a></li>
-        <li><a href="#">Дорожная карта</a></li>
+        <li><a href="#how">Как это работает</a></li>
+        <li><a href="#features">Ключевые функции</a></li>
+        <li><a href="#roadmap">Дорожная карта</a></li>
         <li>
           <div class="lang-select">
             <button class="lang-btn" id="langBtn">
@@ -46,16 +46,15 @@
         </li>
       </ul>
 
-      <button class="nav-btn">Стань ранним партнёром</button>
+      <a class="nav-btn" href="#cta">Стань ранним партнёром</a>
 
-      <!-- Бургер -->
+ 
       <button class="burger" id="burgerBtn">
         <img src="/img/hero/burger.svg" alt="menu" />
       </button>
     </nav>
   </div>
 
-  <!-- ===== Мобильное меню ===== -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-header">
       <div class="logo">
@@ -67,11 +66,10 @@
     </div>
 
     <ul>
-  <li class="mobile-menu-links-li"><a href="#" class="mobile-menu-links">Как это работает</a></li>
-  <li class="mobile-menu-links-li"><a href="#" class="mobile-menu-links">Ключевые функции</a></li>
-  <li class="mobile-menu-links-li"><a href="#" class="mobile-menu-links">Дорожная карта</a></li>
+  <li class="mobile-menu-links-li"><a href="#how" class="mobile-menu-links">Как это работает</a></li>
+  <li class="mobile-menu-links-li"><a href="#features" class="mobile-menu-links">Ключевые функции</a></li>
+  <li class="mobile-menu-links-li"><a href="#roadmap" class="mobile-menu-links">Дорожная карта</a></li>
 
-  <!-- Выпадающий список языка -->
   <li class="mobile-lang">
     <button class="lang-btn" id="mobileLangBtn">
       <span>Рус</span>
@@ -89,7 +87,7 @@
 </ul>
 
 
-    <button class="nav-btn">Стань партнёром</button>
+    <a class="nav-btn" href="#cta">Стань партнёром</a>
 
     <div class="footer-burger" style="margin-top: 60%; ">
       <hr class="footer-burger-hr"/>
@@ -198,19 +196,17 @@
 
 
 
-<section class="solution">
+<section class="solution" id="features">
   <div class="container solution__container">
     <h2 class="solution__title">
       Наша платформа заменяет неэффективную модель на прозрачный рынок с прямым доступом, предоставляя контроль и инструменты для достижения успеха.
     </h2>
 
     <div class="solution__body">
-      <!-- иллюстрация слева -->
       <div class="solution__image">
         <img src="/img/solution/solution.svg" alt="Схема WestLink" />
       </div>
 
-      <!-- список преимуществ справа -->
       <ul class="solution__list">
         <li class="solution__item">
           <h3 class="solution__item-title">Гарантированная оплата</h3>
@@ -246,7 +242,6 @@
     </p>
 
     <div class="features__grid">
-      <!-- 1 -->
       <div class="feature-card">
         <img src="/img/features/feature-1.svg"
              alt="Динамический рынок предложений"
@@ -258,7 +253,6 @@
         </p>
       </div>
 
-      <!-- 2 -->
       <div class="feature-card">
         <img src="/img/features/feature-2.svg"
              alt="Безопасные эскроу-платежи"
@@ -269,7 +263,6 @@
         </p>
       </div>
 
-      <!-- 3 -->
       <div class="feature-card">
         <img src="/img/features/feature-3.svg"
              alt="Отслеживание в реальном времени"
@@ -282,7 +275,6 @@
         </p>
       </div>
 
-      <!-- 4 -->
       <div class="feature-card">
         <img src="/img/features/feature-4.svg"
              alt="Профили проверенных перевозчиков"
@@ -293,7 +285,6 @@
         </p>
       </div>
 
-      <!-- 5 (центральная иконка без карточки) -->
       <div class="feature-card feature-card--ghost">
         <img src="/img/features/feature-5.svg"
              alt="Центр прямой коммуникации"
@@ -304,7 +295,6 @@
         </p>
       </div>
 
-      <!-- 6 -->
       <div class="feature-card">
         <img src="/img/features/feature-6.svg"
              alt="Защищённый обмен документами"
@@ -319,7 +309,7 @@
 </section>
 
 
-<section class="how-it-works">
+<section class="how-it-works" id="how">
   <div class="container how-it-works__container">
     <h2 class="how-it-works__title">
       Одна платформа. Один процесс. Все под контролем
@@ -328,14 +318,12 @@
      Наша платформа — это единый источник создающий четкий, проверенный путь от размещения груза до финальной оплаты.
     </p>
 
-    <!-- десктопная схема -->
     <img
       src="/img/how-it-works/work.svg"
       alt="Схема процесса размещения и перевозки"
       class="how-it-works__scheme how-it-works__scheme--desktop"
     />
 
-    <!-- мобильная (две половины) -->
     <img
       src="/img/how-it-works/roadmap shipper.svg"
       alt="Процесс перевозчика (мобайл)"
@@ -349,9 +337,8 @@
   </div>
 </section>
 
-<section class="demo">
+<section class="demo" id="demo">
   <div class="container demo__container">
-    <!-- mp4 лежит в /video/0916.mp4 -->
     <video
       class="demo__video"
       src="/video/0916.mp4"
@@ -364,18 +351,16 @@
   </div>
 </section>
 
-<section class="roadmap">
+<section class="roadmap" id="roadmap">
   <div class="container roadmap__container">
     <h2 class="roadmap__title">Наша дорожная карта</h2>
 
-    <!-- desktop / tablet -->
     <img
       src="/img/roadmap/roadmap-desktop.svg"
       alt="Этапы развития платформы"
       class="roadmap__img roadmap__img--desktop"
     />
 
-    <!-- mobile -->
     <img
       src="/img/roadmap/roadmap-mobile.svg"
       alt="Этапы развития платформы (мобильная версия)"
@@ -384,10 +369,8 @@
   </div>
 </section>
 
-<!-- =====================  CTA – Call to Action  ===================== -->
-<section class="cta">
+<section class="cta" id="cta">
   <div class="container cta__container">
-    <!-- ---------- Headings ---------- -->
     <h2 class="cta__title">
       Определите будущее прямых грузоперевозок уже
       <span class="cta__title--accent">сегодня</span>
@@ -400,9 +383,7 @@
       создать инструмент, который определит будущее этой индустрии.
     </p>
 
-    <!-- ---------- GRID  (лист + мак-ап) ---------- -->
     <div class="cta__grid">
-      <!-- ---- LEFT : чек-лист ---- -->
       <ul class="cta__list">
         <li class="cta__item">
           <span class="cta__icon">
@@ -474,7 +455,6 @@
         </li>
       </ul>
 
-      <!-- ---- RIGHT : макет интерфейса ---- -->
       <img
         src="/img/hero/hero-img.svg"
         class="cta__mockup"
@@ -482,7 +462,6 @@
       >
     </div>
 
-    <!-- ---------- CTA-buttons ---------- -->
     <div class="cta__buttons">
       <a href="https://web.telegram.org/k/#-3026205281" class="btn btn--primary btn-cta">
         <img src="/img/cta/telegram.svg" alt="">
@@ -497,10 +476,8 @@
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container footer__top">
-    <!-- ── Бренд, слоган и копирайт (десктоп) ── -->
     <div class="footer__brand">
       <a href="/" class="footer__logo">
         <img src="/img/logo/logo-full.svg" alt="WestLink">
@@ -510,13 +487,11 @@
         Прямые, безопасные, эффективные перевозки.
       </p>
 
-      <!-- копирайт для десктопа / планшета -->
       <p class="footer__copyright footer__copyright--desktop">
         © 2025 WestLink. Все права защищены.
       </p>
     </div>
 
-    <!-- ── Навигация ── -->
     <nav class="footer__nav">
       <h4 class="footer__heading">Навигация</h4>
       <ul class="footer__list">
@@ -526,7 +501,6 @@
       </ul>
     </nav>
 
-    <!-- ── Правовая информация ── -->
     <div class="footer__legal">
       <h4 class="footer__heading">Правовая информация</h4>
       <ul class="footer__list">
@@ -536,7 +510,6 @@
     </div>
   </div>
 
-  <!-- линия + копирайт для мобильной версии -->
   <hr class="footer__divider">
   <p class="footer__copyright footer__copyright--mobile">
     © 2025 WestLink. Все права защищены.
