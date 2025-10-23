@@ -659,7 +659,6 @@ li {
   box-shadow: 0 6px 20px rgba(0,0,0,.08);
 }
 
-.feature-card--ghost {}
 
 .feature-card__icon {
   position: absolute;
@@ -794,7 +793,7 @@ li {
 
 
 .demo {
-  padding: 100px 0;
+  padding: 30px 0;
   background: #fff;
 }
 
@@ -818,12 +817,14 @@ li {
 }
 
 @media (max-width: 768px) {
-  .demo { padding: 10px 0; }
+  .demo { padding: 0; }
+  .demo__container { padding: 0; }
+  .demo__video { width: 100vw; max-width: 100vw; }
 }
 
 
 .roadmap {
-  padding: 100px 0;
+
   background: #fff;
 }
 
@@ -1006,7 +1007,7 @@ li {
 }
 
 .footer{
-  padding:80px 0 40px;
+  padding:80px 0 40px; /* default */
   background:#fff;
   font-family:'DM Sans',sans-serif;
   color:#111827;
@@ -1021,7 +1022,7 @@ li {
 
 .footer__top{
   display:grid;
-  grid-template-columns:1fr 220px 260px; 
+  grid-template-columns:1fr 220px 260px;
   gap:60px;
   align-items:start;
 }
@@ -1063,9 +1064,11 @@ li {
 .footer__copyright--desktop{margin-top:24px;text-align:left;}
 .footer__copyright--mobile{text-align:center;}
 
+.footer__copyright--mobile,
+.footer__divider{display:none;}
+
 @media(max-width:1024px){
   .footer{padding:60px 0 30px;}
-
   .footer__top{
     grid-template-columns:1fr 1fr;
     gap:48px 60px;
@@ -1073,50 +1076,64 @@ li {
   .footer__legal{order:1;}
   .footer__nav{order:2;}
 }
-@media (max-width: 1013px){
-  .footer{ padding: 40px 0 24px; }
 
+@media (max-width:1013px){
+  .footer{padding:40px 0 24px;}
   .footer__top{
-    display:grid;
-    grid-template-columns: repeat(2, auto);  
+    grid-template-columns:repeat(2,auto);
     grid-template-areas:
-      "brand  brand"      
-      "nav    legal";       
-    justify-content:center;                   
-    gap: 40px 2px;
+      "brand brand"
+      "nav legal";
+    justify-content:center;
     text-align:center;
   }
-
-  .footer__brand { grid-area: brand; text-align:center; }
-  .footer__nav   { grid-area: nav;   text-align:left;   }
-  .footer__legal { grid-area: legal; text-align:left;   }
-
-  .footer__tagline { margin-top:16px; font-size:18px; line-height:28px; }
-  .footer__heading { font-size:16px; }
-  .footer__list a  { font-size:14px; }
-
-  .footer__divider{ margin:48px 0 30px; }
+  .footer__brand{grid-area:brand;text-align:center;}
+  .footer__nav{grid-area:nav;text-align:left;}
+  .footer__legal{grid-area:legal;text-align:left;}
+  .footer__tagline{margin-top:16px;font-size:18px;line-height:28px;}
+  .footer__heading{font-size:16px;}
+  .footer__list a{font-size:14px;}
+  .footer__divider{margin:48px 0 30px;}
+  .footer__copyright--desktop{text-align:center;}
 }
 
-@media (max-width: 480px){
+@media (max-width:480px){
   .footer__top{
-    grid-template-columns: 1fr;            
+    grid-template-columns:1fr;
     grid-template-areas:
       "brand"
       "nav"
       "legal";
-    justify-content: stretch;
-    text-align: left;
-    gap: 32px;
+    justify-content:stretch;
+    text-align:left;
+    gap:32px;
   }
-  .footer__brand{ text-align:left; }
+  .footer__brand{text-align:left;}
 }
 
-.footer__copyright--mobile,
-.footer__divider { display:none; }           
-
 @media (max-width:768px){
-  .footer__copyright--desktop{ display:none; }
+  .footer__copyright--desktop{display:none;}
   .footer__divider,
-  .footer__copyright--mobile{ display:block; text-align:center; }
+  .footer__copyright--mobile{display:block;text-align:center;}
+}
+
+@media (min-width:1200px) and (max-width:1399px){
+  .footer{padding:90px 0 50px;}
+  .footer__top{grid-template-columns:1fr 260px 300px;gap:70px 100px;}
+  .footer__logo img{max-width:260px;}
+  .footer__tagline{font:500 22px/34px 'DM Sans',sans-serif;max-width:660px;}
+  .footer__heading{font:700 20px 'DM Sans',sans-serif;}
+  .footer__list a{font:500 17px/28px 'DM Sans',sans-serif;}
+  .footer__divider{margin:70px 0 40px;}
+}
+
+@media (min-width:1400px){
+  .footer{padding:100px 0 60px;}
+  .footer__top{grid-template-columns:1fr 300px 340px;gap:80px 120px;}
+  .footer__logo img{max-width:280px;}
+  .footer__tagline{font:500 24px/38px 'DM Sans',sans-serif;max-width:720px;}
+  .footer__heading{font:700 22px 'DM Sans',sans-serif;}
+  .footer__list a{font:500 18px/30px 'DM Sans',sans-serif;}
+  .footer__divider{margin:80px 0 50px;}
+  .footer__copyright{font:400 16px/26px 'DM Sans',sans-serif;}
 }
